@@ -6,8 +6,8 @@
  */
  function Frame(event, type)
  {
-   this.Y = event.clientX;
-   this.X = event.clientY;
+   this.Y = event.pageY;
+   this.X = event.pageX;
    this.type = type;
  }
  /*

@@ -8,6 +8,7 @@ function load_file(js_filename)
   document.head.appendChild(js);
 }
 load_file("../src/Recorder.js");
+load_file("../src/Player.js");
 load_file("../src/Track.js");
 load_file("../src/Frame.js");
 /*

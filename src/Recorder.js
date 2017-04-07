@@ -20,7 +20,13 @@ Recorder.prototype =
 
     save:function()
     {
-      console.log(JSON.stringify(this.track));
+      /*
+          Do whatever you like with the data here!
+          You can send it using ajax
+      */
+      data = JSON.stringify(this.track);
+      player = new Player(data);
+      player.play();
     }
 }
 
@@ -42,11 +48,9 @@ function add_on_click_listener_to_document(track)
   {
     frame = new Frame(event, Frame.TYPE_MOUSE_CLICK);
     track.add_frame(frame);
-    /*
-        You can actually send it using ajax from here
-        We prevent from continuing just to show you the JSON data in logs
-    */
     recorder.save();
+    // TODO remove this return once you change save
+    console.error("Please remove 'return false' after dealing with recorder.save() function");
     return false;
   };
 }
